@@ -39,7 +39,7 @@ if(empty($usermail)) {
 if(mb_strlen($usermail) > 100) {
   die("Error: e-mail は 100 文字以下である必要があります");
 }
-if(!filter_var($usermail, FILTER_VALIDATE_EMAIL)) {
+if(!mb_ereg("^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*$", $usermail)) {
   die("Error: e-mail がメールアドレス形式ではありません");
 }
 
