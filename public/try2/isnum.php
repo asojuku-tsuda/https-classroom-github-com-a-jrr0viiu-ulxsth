@@ -10,7 +10,7 @@
       <h2>
 <?php
 $data = filter_input(INPUT_GET, "indata");
-if(!mb_ereg("^[0-9]+$", $data)) {
+if(!mb_ereg("^[0-9.]+$", $data)) {
   die("Error: 整数値ではない値が入力されています");
 }
 
